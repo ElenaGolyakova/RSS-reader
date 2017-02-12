@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jgj-Te-AkF">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tdR-SA-Pfd">
+            <objects>
+                <navigationController id="jgj-Te-AkF" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DiM-cT-Cnv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1V5-Xl-i76" kind="relationship" relationship="rootViewController" id="4mZ-gd-KK7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsC-5g-nka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-937" y="-29"/>
+        </scene>
+        <!--RSS-Reader-->
+        <scene sceneID="Dxy-3f-YEj">
+            <objects>
+                <viewController id="1V5-Xl-i76" customClass="NewsListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q92-Wu-NuN"/>
+                        <viewControllerLayoutGuide type="bottom" id="ug5-wd-jG7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kXI-dK-UWH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ce-QW-OGr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="xhz-AA-7TX" userLabel="footter">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff0-3w-Xxo">
+                                <rect key="frame" x="15" y="252" width="290" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2kl-9a-tx7">
+                                <rect key="frame" x="150" y="242" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ce-QW-OGr" firstAttribute="leading" secondItem="kXI-dK-UWH" secondAttribute="leading" id="2ob-6b-LRG"/>
+                            <constraint firstItem="2kl-9a-tx7" firstAttribute="centerX" secondItem="kXI-dK-UWH" secondAttribute="centerX" id="7VU-yt-73c"/>
+                            <constraint firstItem="ff0-3w-Xxo" firstAttribute="centerX" secondItem="kXI-dK-UWH" secondAttribute="centerX" id="9D2-bQ-Rgq"/>
+                            <constraint firstItem="ug5-wd-jG7" firstAttribute="top" secondItem="4ce-QW-OGr" secondAttribute="bottom" id="HnQ-rq-fjA"/>
+                            <constraint firstItem="4ce-QW-OGr" firstAttribute="top" secondItem="kXI-dK-UWH" secondAttribute="top" id="Ra4-A5-CHS"/>
+                            <constraint firstItem="ff0-3w-Xxo" firstAttribute="centerY" secondItem="kXI-dK-UWH" secondAttribute="centerY" id="VlA-SH-eke"/>
+                            <constraint firstItem="ff0-3w-Xxo" firstAttribute="leading" secondItem="kXI-dK-UWH" secondAttribute="leading" constant="15" id="ZdF-Dr-ub8"/>
+                            <constraint firstAttribute="trailing" secondItem="4ce-QW-OGr" secondAttribute="trailing" id="ZfH-o6-huw"/>
+                            <constraint firstAttribute="trailing" secondItem="ff0-3w-Xxo" secondAttribute="trailing" constant="15" id="Zq1-ZH-7xJ"/>
+                            <constraint firstItem="2kl-9a-tx7" firstAttribute="centerY" secondItem="kXI-dK-UWH" secondAttribute="centerY" id="hSG-P6-JZa"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="RSS-Reader" id="sQ7-Aa-yaG"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="2kl-9a-tx7" id="cad-E1-vC0"/>
+                        <outlet property="infoLabel" destination="ff0-3w-Xxo" id="3Oh-ah-gT7"/>
+                        <outlet property="tableView" destination="4ce-QW-OGr" id="GGU-KZ-k65"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3av-zH-7vg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="-29"/>
+        </scene>
+    </scenes>
+</document>
